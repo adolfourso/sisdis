@@ -1,0 +1,55 @@
+html,
+body {
+  height: 100%;
+}
+
+// Code blocks
+
+pre {
+  color: #fff !important;
+}
+
+// Root element for stories
+
+#root {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Buttons
+
+.docs-buttons-wrapper .btn {
+  margin: 6px 12px;
+}
+
+.docs-button-block-wrapper {
+  width: 300px;
+  text-align: center;
+}
+
+// Modals
+
+.sbdocs-preview {
+  &.modal-preview > div > div {
+    padding: 0;
+    > div {
+      margin: 0;
+    }
+  }
+
+  .docs-modal-wrapper {
+    height: 350px;
+
+    .modal {
+      overflow-y: auto;
+    }
+
+    .modal-backdrop {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+}

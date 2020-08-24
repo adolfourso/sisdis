@@ -1,0 +1,38 @@
+<!-- Addons -->
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
+import { withA11y } from "@storybook/addon-a11y";
+
+<!-- Component -->
+import { Button } from ".";
+
+<Meta
+  title="Átomos|Botón/Accesibilidad"
+  component={Button}
+  decorators={[withA11y]}
+  parameters={{
+    design: {
+      artboardUrl: ""
+    }
+  }} />
+
+
+# Consideraciones de accesibilidad
+
+- Es necesario respetar las etiquetas semánticas, por lo que deben utilizarsen la etiqueta `<button>`.
+- Deben respetarse los valores mínimos de contraste y tamaño mínimo en de la tipografía.
+- Deben responder a la navegación e interacción con el teclado.
+
+## Aria labels
+
+La etiqueta de un botón puede estar escrita como `<button>` o proporcionada por el atributos `role="button"`.
+Usar la propiedad `aria-disabled` para marcar como desabilitado el estado del botón.
+
+<Preview>
+  <Story name="Aria labels">
+    <div className="docs-buttons-wrapper">
+        <span class="btn btn-secondary" role="button"  tabindex="0">Span con role=button</span>
+        <span class="btn btn-secondary active" role="button"  tabindex="0" aria-pressed>Span con role=button y aria-pressed</span>
+        <span class="btn btn-secondary disabled" role="button"  tabindex="0" aria-disabled>Span con role=button y aria-disabled</span>
+    </div>
+  </Story>
+</Preview>

@@ -1,0 +1,56 @@
+<!-- Addons -->
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
+import { withA11y } from "@storybook/addon-a11y";
+import { withXD } from "storybook-addon-xd-designs";
+
+<!-- Component -->
+import { Button } from ".";
+
+<Meta
+  title="Átomos|Botón/Formatos"
+  component={Button}
+  decorators={[withA11y, withXD]}
+  parameters={{
+    design: {
+      artboardUrl: "https://xd.adobe.com/view/75e1e49f-d476-412e-71d4-628872af84a8-03d0/screen/e5b8cc27-63b4-4c73-97e4-61024b5b3686/Formats"
+    }
+  }} />
+
+
+
+# Formatos de botones
+
+Dependiendo el contexto, puede necesitarse que el botón se ajuste de forma diferente al contexto.
+Estas son algunas de las transformaciones que pueden realizarse.
+
+## Tamaños
+
+<Preview>
+  <Story name="Tamaños">
+    <div className="docs-buttons-wrapper">
+        <Button type="secondary" size="small">Chico</Button>
+        <Button type="secondary">Normal</Button>
+        <Button type="secondary" size="large">Grande</Button>
+    </div>
+  </Story>
+</Preview>
+
+### ¿Cuándo usarlos?
+
+- Los botones chicos se deben utilizar como acciones dentro de tablas o dentro de otros componentes que no tengan mucho espacio.
+- Los botones grandes deben utilizarse cuando hay un único call to action en una página de marketing.
+
+## Expandible
+
+<Preview>
+  <Story name="Expandible">
+    <div className="docs-button-block-wrapper">
+        <Button type="secondary" block={true}>Expandible</Button>
+    </div>
+  </Story>
+</Preview>
+
+### ¿Cuándo usarlos?
+
+- Cuando los botones son paerte de tarjetas
+- Cuando sea necesario que el botón tome el contenido de la grilla.
